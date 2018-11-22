@@ -1,15 +1,15 @@
 # Frontend Data
 
 - [Process](#process)
-- [Visualisation](#visualisation-chart_with_upwards_trend)
-- [Plan / Outcome](#whats-next-arrow_right)
-- [Experience and opinion](https://github.com/jessiemasonx/frontend-data#experience-and-opinion)
-- [Credits and help](#credits-and-help-heartpulseheartpulse)
+- [Visualisation](#visualisation)
+- [Plan / Outcome](plan--outcome)
+- [Experience and opinion](#experience-and-opinion)
+- [Credits and help](#credits-and-help)
 
 
 ## Process
 
-In the beginning of the project I was just thinking about what I wanted to visualize. This was actually quite hard for me because I wanted to be original but there weren't a lot of variables I could choose from so to choose an original idea was tricky.
+In the beginning of the project I was just thinking about what I wanted to visualise. This was actually quite hard for me because I wanted to be original but there weren't a lot of variables I could choose from so to choose an original idea was tricky.
 
 What I did was I looked at the API once again and wrote on a piece of paper what variables there were, and I wrote down 3 ideas that I had.
 
