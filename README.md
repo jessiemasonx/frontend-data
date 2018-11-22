@@ -85,5 +85,23 @@ Another thing that I wanted to have done differently is that when I sort it crea
 
 At the beginning of this project I was extremely excited. d3 was something I was very interested in already because of the last project, so I was triggered to learn more about it.
 
-
 Something I loved about d3 in this project is that it was new for everyone. This was a nice thing for me because I know that compared to a lot of the others my knowlegde of everything in this *field* is not as much there's, but because this was new for everyone it kind off felt like everyone was on the same level again. This meant I could help others too and I really enjoyed that. There was less of a difference in level throughout the class than normally.
+
+I feel like I learned so much during this project. Every day I knew a little more and every day it got a little easier because of that. I remember with the last projects when I looked at code examples of d3 I barely knew what was going on, but now there are so many things I understand when I look at d3 code.
+
+I definitely think d3 is something I will use in the future when making data visualisations.
+
+## Credits and help
+
+### Online Sources
+- [Introduction to D3.js - Bar Graph Tutorial](https://www.youtube.com/watch?v=Fjmxh-gnBM0) || Creating the bars - youtube video
+- [D3js Tutorials: Part 13 - Adding Tooltips To Your Bar Graph](https://www.youtube.com/watch?v=wsCOif7RMBo) || Adding tooltip - youtube video
+- [W3schools cursors](https://www.w3schools.com/cssref/pr_class_cursor.asp)
+- [Learning Nest](http://learnjsdata.com/group_data.html) ❤️❤️❤️
+
+### People
+- [Linda de Haan](https://github.com/LindadeHaan)
+- [Chelsea Doeleman](https://github.com/chelseadoeleman)
+- [Maikel van Veen](https://github.com/Maikxx)
+- [Wouter Lem](https://github.com/maanlamp)
+- [Guus Dijkhuis](https://github.com/GuusDijkhuis)https://github.com/GuusDijkhuis
