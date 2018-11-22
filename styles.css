@@ -1,11 +1,18 @@
 svg {
-	border: solid 1px white;
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
 	width: 100%;
 	height: 90rem;
 
+}
+
+h2 {
+	color: lightgray;
+	font-family: sans-serif;
+	margin-left: 3.3rem;
+	margin-top: 6rem;
+	z-index: 1;
 }
 
 .xAxis {
@@ -30,21 +37,43 @@ body {
 
 .tooltip {
 	text-decoration: underline;
-	font-family: open-sans;
+	font-family: sans-serif;
 }
-
-/* .main-group {
-	margin-top: 200rem;
-} */
 
 #topics {
 	position: absolute;
-	background-color: white;
-	width: 28rem;
-	z-index: -1;
-	height: 80rem;
-	right: 3rem;
-	background-color: black;
-	height: 91rem;
+    background-color: #3d3d3d;
+    width: 28rem;
+    top: 0;
+    z-index: -1;
+    height: 80rem;
+    right: 3rem;
+    height: 97rem;
+}
 
+h1 {
+	color: lightgray;
+	font-family: sans-serif;
+	font-weight: 400;
+	font-size: 1.6rem;
+	margin-left: 1rem;
+}
+
+.styled-select {
+   	background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+   	height: 29px;
+   	overflow: hidden;
+   	width: 240px;
+	border-radius: 5px;
+	background-color: rgb(220, 130, 280);
+	margin-left: 1rem;
+}
+
+select {
+   background: transparent;
+   border: none;
+   font-size: 14px;
+   height: 29px;
+   padding: 5px; /* If you add too much padding here, the options won't show in IE */
+   width: 268px;
 }
