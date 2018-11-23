@@ -27,9 +27,6 @@ body {
 	background-color: rgb(29, 32, 32);
 }
 
-.man {
-  /* fill: orange; */
-}
 
 .man:hover {
   fill: #C71585	 ;

@@ -2,7 +2,7 @@
 
 - [Process](#process)
 - [Visualisation](#visualisation)
-- [Plan / Outcome](#plan--outcome)
+- [Plan / Outcome](https://github.com/jessiemasonx/frontend-data2/blob/master/README.md#plan--outcome)
 - [Experience and opinion](#experience-and-opinion)
 - [Credits and help](#credits-and-help)
 

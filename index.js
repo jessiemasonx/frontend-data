@@ -1,8 +1,5 @@
 require("dotenv").config()
 
-// packages
-
-// extra
 const chalk = require("chalk")
 const d3 = require("d3")
 const fs = require("fs")
@@ -13,7 +10,6 @@ const obawrapper = require("node-oba-api-wrapper")
 const app = express()
 const port = 3000
 
-// functions
 const helpers = require("./helpers.js")
 
 const obaApi = new obawrapper({
@@ -35,23 +31,8 @@ const search = async (q, facet, count) => {
             const publicationYear = helpers.getPublicationYearFromResult(result)
             const currentYear = new Date().getFullYear()
 			return publicationYear >= currentYear - 40
-			// return publicationYear === 2018
 			&& helpers.getGenreFromResult(result)
 
-			// filter on publicationYear from the last 30 years
-			// return publicationYear >= currentYear - 30 &&
-
-			// && helpers.getGenreFromResult(result)
-            // return publicationYear === 2018
-            // return publicationYear === currentYear - 3 &&
-            //     helpers.getGenreFromResult(result) ||
-            //     publicationYear === 2017 &&
-            //     helpers.getGenreFromResult(result) ||
-            //     publicationYear === 2016 &&
-            //     helpers.getGenreFromResult(result) ||
-                // publicationYear === 2015 &&
-            //     helpers.getGenreFromResult(result)
-            // return where is has a genre that is romantisch verhaal
         }
     })
 }
@@ -59,15 +40,12 @@ const search = async (q, facet, count) => {
 (async () => {
     try {
         // q, facet, page
-        // const results = await search("type:book", [], 1)
 		const thriller = await search("genre:thriller", ["type(book)"], 300)
 		const thriller2001 = await search("genre:thriller", ["type(book)", "pubYear(2001)"], 300)
 		const thriller2008 = await search("genre:thriller", ["type(book)", "pubYear(2008)"], 300)
        	const roman = await search("genre:romantisch-verhaal", ["type(book)"], 300)
 		const roman2001 = await search("genre:romantisch-verhaal", ["type(book)", "pubYear(2001)"], 300)
 		const roman2008 = await search("genre:romantisch-verhaal", ["type(book)", "pubYear(2008)"], 300)
-		// const sprookjes = await search("genre:sprookjes", ["type(book)"], 300)
-		// const sprookjes2001 = await search("genre:sprookjes", ["type(book)", "pubYear(2001)"], 300)
 		const sciencefiction = await search("genre:science-fiction", ["type(book)"], 300)
 		const sciencefiction2001 = await search("genre:science-fiction", ["type(book)", "pubYear(2001)"], 300)
 		const sciencefiction2008 = await search("genre:science-fiction", ["type(book)", "pubYear(2008)"], 300)
@@ -123,12 +101,6 @@ const search = async (q, facet, count) => {
         if (results) {
             // get the results from helpers.js
             const transformedResults = helpers.getTransformedResultFromResults(results)
-            // get the authors from the results
-            // const authors = transformedResults.map(result => result.author)
-            // get the first names without the dots from helpers.js
-            // const transformedAuthors = authors.map(helpers.getFirstNameAndGender)
-            // get every first name and gender
-
             const filterResultsWithNameAndGender = transformedResults.filter(transformedResult => {
                 return transformedResult.author
 					&& transformedResult.author.name
