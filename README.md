@@ -109,4 +109,4 @@ I definitely think d3 is something I will use in the future when making data vis
 - [Chelsea Doeleman](https://github.com/chelseadoeleman)
 - [Maikel van Veen](https://github.com/Maikxx)
 - [Wouter Lem](https://github.com/maanlamp)
-- [Guus Dijkhuis](https://github.com/GuusDijkhuis)https://github.com/GuusDijkhuis
+- [Guus Dijkhuis](https://github.com/GuusDijkhuis)

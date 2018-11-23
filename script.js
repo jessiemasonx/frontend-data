@@ -22,28 +22,28 @@ const svg = d3.select("#chart")
 // when the select is changed the value changes
 // and will call function changeOrder
 // changeOrder executes 2 functions depending on the case which is the option selected
-body.selectAll('select')
-    .on('change', d => {
-        let selectedValue = document.querySelector('#graphChoices').value;
+body.selectAll("select")
+    .on("change", d => {
+        let selectedValue = document.querySelector("#graphChoices").value
         changeOrder(selectedValue)
     })
 
 changeOrder = selectedValue => {
     switch (selectedValue) {
-        case 'high-low':
+        case "high-low":
             updateDataHighLow()
-            break;
-        case 'low-high':
+            break
+        case "low-high":
             updateDataLowHigh()
-            break;
+            break
     }
 }
 
 // when high to low is selected
 function updateDataHighLow() {
-    // to make sure the other svg doesn't go over this one
-    d3.selectAll('rect').remove()
-    d3.selectAll('text').remove()
+    // to make sure the other svg doesn"t go over this one
+    d3.selectAll("rect").remove()
+    d3.selectAll("text").remove()
     d3.json("data.json").then(function(data) {
         // nesting
         // counting the amount of books per gender
@@ -77,7 +77,7 @@ function updateDataHighLow() {
             })
 
         // nesting
-        // showing me the topics per genre and how many times they're there
+        // showing me the topics per genre and how many times they"re there
         const subjectsPerGenre = d3.nest()
             .key(function(d) {
                 return d.genre
@@ -97,12 +97,12 @@ function updateDataHighLow() {
             const bManPercentage = b.values.find(obj => obj.key == "Man").percentage
 
             if (aManPercentage > bManPercentage) {
-                return -1;
+                return -1
             }
             if (aManPercentage < bManPercentage) {
-                return 1;
+                return 1
             }
-            return 0;
+            return 0
         })
 
         // max value
@@ -261,10 +261,10 @@ function updateDataHighLow() {
             .style("font-weight", "bold")
             .attr("font-family", "sans-serif")
             .attr("fill", "rgb(220, 130, 280)")
-            .text("Percentage of men");
+            .text("Percentage of men")
 
         // wouter helped
-        // finds the 'percentage' where the key is man
+        // finds the "percentage" where the key is man
         function getPercentageOfMen(d) {
             return d.values.find(obj => obj.key == "Man").percentage
         }
@@ -272,8 +272,8 @@ function updateDataHighLow() {
         // maikel helped
         // if you click on the window then remove the subjects element
         // but not if you clock on a bar (all bars have class man)
-        window.addEventListener('click', (e) => {
-            const barClicked = e.target.classList.contains('man')
+        window.addEventListener("click", (e) => {
+            const barClicked = e.target.classList.contains("man")
             if (!barClicked) {
                 subjects._groups[0][0].innerHTML = 0
             }
@@ -283,8 +283,8 @@ function updateDataHighLow() {
 
 // when low to high is selected
 function updateDataLowHigh() {
-    d3.selectAll('rect').remove()
-    d3.selectAll('text').remove()
+    d3.selectAll("rect").remove()
+    d3.selectAll("text").remove()
     d3.json("data.json").then(function(data) {
 
         // NEST
@@ -336,12 +336,12 @@ function updateDataLowHigh() {
             const bManPercentage = b.values.find(obj => obj.key == "Man").percentage
 
             if (aManPercentage > bManPercentage) {
-                return 1;
+                return 1
             }
             if (aManPercentage < bManPercentage) {
-                return -1;
+                return -1
             }
-            return 0;
+            return 0
         })
 
         // max value
@@ -408,7 +408,7 @@ function updateDataLowHigh() {
                 tooltip.style("display", "block")
                     .attr("class", "tooltip")
                     .style("background", "red")
-                // .style("cursor", "pointer");
+                // .style("cursor", "pointer")
                 d3.select(this).style("cursor", "pointer")
             })
             .on("mouseout", function() {
@@ -431,7 +431,6 @@ function updateDataLowHigh() {
                 clickedSubject.values.forEach((v, i) => {
                     subjects.style("display", "block")
                         .append("text")
-                        // .attr('class', d => `subjects--${v.key}`)
                         .attr("x", 730)
                         .attr("y", 30 + i * 22)
                         .text(v.key)
@@ -495,14 +494,14 @@ function updateDataLowHigh() {
             .style("font-weight", "bold")
             .attr("font-family", "sans-serif")
             .attr("fill", "rgb(220, 130, 280)")
-            .text("Percentage of men");
+            .text("Percentage of men")
 
         function getPercentageOfMen(d) {
             return d.values.find(obj => obj.key == "Man").percentage
         }
 
-        window.addEventListener('click', (e) => {
-            const barClicked = e.target.classList.contains('man')
+        window.addEventListener("click", (e) => {
+            const barClicked = e.target.classList.contains("man")
             if (!barClicked) {
                 subjects._groups[0][0].innerHTML = 0
             }
